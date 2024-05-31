@@ -24,17 +24,27 @@ body {
 }
 
 .container-main {
-  width: 90%;
-  height: 80%;
+  width: 20.4375rem;
+  transition: width 0.3s ease;
+  height: 31.25rem;
   background-color: hsl(0, 0%, 100%);
-  border: solid;
+  border: 2px solid;
   border-radius: 0.8rem;
-  box-shadow: 0 0.3rem 0.5rem 0;
+  box-shadow: 0.5rem 0.7rem 0 0 #000;
   padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .container-main {
+    width: 24rem;
+    height: 32.625rem;
+    padding: 1.5rem;
+  }
 }
 
 .container-main img {
   width: 100%;
+  border-radius: 0.8rem;
 }
 
 .container-information {
@@ -53,6 +63,14 @@ body {
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   width: 30%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.container-information button:hover {
+  background-color: hsl(0, 0%, 50%);
+  color: #fff;
+  transform: scale(1.01);
 }
 
 .container-information h3 {
@@ -65,6 +83,13 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 24px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.container-information h1:hover {
+  color: hsl(47, 88%, 63%);
+  transform: scale(1.01);
 }
 
 .container-information span {
@@ -75,10 +100,18 @@ body {
   color: hsl(0, 0%, 50%);
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 600px) {
+  .text-info {
+    margin-bottom: 0;
+  }
+}
 
 .container-avatar-info {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 600px) {
 }
 
 .container-avatar-info img {
@@ -86,7 +119,12 @@ body {
 }
 
 .container-avatar-info p {
-  margin-left: 1rem;
+  margin-left: 0.8rem;
   text-transform: capitalize;
   font-weight: 800;
+}
+
+.container-avatar-info p:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
 }
