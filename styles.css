@@ -1,21 +1,25 @@
-/* 
-Colors
-Primary
-Yellow: hsl(47, 88%, 63%)
-Neutral
-White: hsl(0, 0%, 100%)
-Grey: hsl(0, 0%, 50%)
-Black: hsl(0, 0%, 7%)
-*/
+/* Colors */
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+/* Reset and Box Sizing */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
+
 body {
   font-family: "Figtree", sans-serif;
-  background-color: hsl(47, 88%, 63%);
+  background-color: var(--yellow);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -23,14 +27,16 @@ body {
   align-items: center;
 }
 
+/* Container Main Styling */
+
 .container-main {
   width: 20.4375rem;
   transition: width 0.3s ease;
   height: 31.25rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   border: 2px solid;
   border-radius: 0.8rem;
-  box-shadow: 0.5rem 0.7rem 0 0 #000;
+  box-shadow: 0.5rem 0.7rem 0 0 var(--black);
   padding: 1rem;
 }
 
@@ -42,6 +48,7 @@ body {
   }
 }
 
+/* Container Information Styling  */
 .container-main img {
   width: 100%;
   border-radius: 0.8rem;
@@ -55,7 +62,7 @@ body {
   /* border: solid; */
 }
 .container-information button {
-  background-color: hsl(47, 88%, 63%);
+  background-color: var(--yellow);
   text-transform: capitalize;
   font-weight: 800;
   padding: 10px;
@@ -68,8 +75,8 @@ body {
 }
 
 .container-information button:hover {
-  background-color: hsl(0, 0%, 50%);
-  color: #fff;
+  background-color: var(--grey);
+  color: var(--white);
   transform: scale(1.01);
 }
 
@@ -88,7 +95,7 @@ body {
 }
 
 .container-information h1:hover {
-  color: hsl(47, 88%, 63%);
+  color: var(--yellow);
   transform: scale(1.01);
 }
 
@@ -97,9 +104,10 @@ body {
 }
 
 .text-info {
-  color: hsl(0, 0%, 50%);
+  color: var(--grey);
   margin-bottom: 1rem;
 }
+
 @media screen and (min-width: 600px) {
   .text-info {
     margin-bottom: 0;
@@ -109,9 +117,6 @@ body {
 .container-avatar-info {
   display: flex;
   align-items: center;
-}
-
-@media screen and (min-width: 600px) {
 }
 
 .container-avatar-info img {
@@ -125,6 +130,6 @@ body {
 }
 
 .container-avatar-info p:hover {
-  color: hsl(47, 88%, 63%);
+  color: var(--yellow);
   cursor: pointer;
 }
